@@ -3,14 +3,15 @@ import os
 import datetime
 import json
 import nltk
+import spacy
 
 # from pdfminer.converter import TextConverter
 # from pdfminer.pdfinterp import PDFPageInterpreter
 # from pdfminer.pdfinterp import PDFResourceManager
 # from pdfminer.layout import LAParams
 # from pdfminer.pdfpage import PDFPage
-print("LOOK AT ME LOOK AT ME Downloading stopwords")
 nltk.download("stopwords")
+spacy.load('en_core_web_sm')
 
 from pyresparser import ResumeParser
 from flask.globals import current_app
